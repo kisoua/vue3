@@ -1,4 +1,4 @@
-import BasicLayout from '@/components/layouts/BasicLayout'
+import BasicLayout from '@/layouts'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '/home',
-        name: 'Home',
+        name: 'home',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.j
@@ -18,12 +18,20 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: '/about',
-        name: 'About',
+        name: 'about',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-          import(/* webpackChunkName: "about" */ '../views/About.vue')
+          import(/* webpackChunkName: "about" */ '../views/About.vue'),
+        children: [
+          {
+            path: '/t',
+            name: 'dsads',
+            component: () =>
+              import(/* webpackChunkName: "about" */ '../views/About.vue')
+          }
+        ]
       }
     ]
   }

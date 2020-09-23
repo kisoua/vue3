@@ -24,7 +24,12 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/utils/axios.js"
+    "src/utils/axios.js",
+    "src/components/RouteMenu/BaseMenu.ssx",
+    "src/components/layouts/SiderMenu.jsx",
+    "src/components/layouts/BasicLayout.jsx",
+    "src/layouts/index.jsx",
+    "src/layouts/Sidermenu.jsx"
   ],
   "exclude": ["node_modules"]
 }
